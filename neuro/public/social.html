@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Skills Enhancement</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+}
+
+/* Courses Section */
+#courses h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+.card {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+#about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+/* Contact Section */
+#contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+.site-footer a:hover {
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+}
+
+</style>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Social Skills</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1>Social Skills Enhancement</h1>
+            <p>Interactive courses focusing on social communication.<br>Building and maintaining relationships.</p>
+            <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="container mt-4">
+        <h2 class="text-center mb-4">Interactive Courses</h2>
+
+        <!-- Add interactive course cards or content here -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="course1.jpg" class="card-img-top" alt="Course 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 1</h5>
+                        <p class="card-text">Description of Course 1.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more course cards as needed -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mt-4">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p class="text-center">Provide information about the mission and goals of your social skills enhancement program.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mt-4">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center">Feel free to reach out for any inquiries or assistance.</p>
+        <!-- Add a contact form or contact information as needed -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">Provide a brief description of your organization and its goals.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="#">Your Organization</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript dependencies (Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

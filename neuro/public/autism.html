@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-integrity-code-here..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffe600;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+           
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #doctorAppointment {
+            background-color: #ffcc00;
+            color: #333;
+            display: none; /* Hidden by default */
+        }
+
+        #doctorAppointment:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/neurologo.png" alt="Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="na1v-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="courses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Test
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="autism.html">Child Autism Test</a>
+                        <a class="dropdown-item" href="#">Adult Autism Test</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Child Autism Screening Questionnaire</h2>
+        <form action="#" method="post" id="autismForm">
+            <!-- Add child-friendly questions here -->
+            <label for="q1">Question 1: Do you enjoy playing with other children?</label>
+            <select name="q1" id="q1">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="q2">Question 2: Do you find it easy to make new friends?</label>
+            <select name="q2" id="q2">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="q3">Question 3: Do you like looking at people's faces and eyes when you talk to them?</label>
+            <select name="q3" id="q3">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="q4">Question 4: Do you sometimes do the same movements or actions over and over, like flapping your hands or rocking back and forth?</label>
+            <select name="q4" id="q4">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="q5">Question 5: Is it okay for you when things change, or do you like things to stay the same?</label>
+            <select name="q5" id="q5">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <!-- Result and Appointment Button -->
+        <div id="result"></div>
+        
+        <button id="doctorAppointment">Make Doctor Appointment</button>
+    </div>
+
+    <script>
+        function submitForm() {
+          
+            var score = 0;
+
+            var q1 = document.getElementById('q1').value;
+            if (q1 === 'no') {
+                score += 1;
+            }
+
+            var q2 = document.getElementById('q2').value;
+            if (q2 === 'no') {
+                score += 1;
+            }
+
+            var q3 = document.getElementById('q3').value;
+            if (q3 === 'no') {
+                score += 1;
+            }
+
+            var q4 = document.getElementById('q4').value;
+            if (q4 === 'no') {
+                score += 1;
+            }
+
+            var q5 = document.getElementById('q5').value;
+            if (q5 === 'no') {
+                score += 1;
+            }
+
+            // Display the result based on the total score
+            var resultContainer = document.getElementById('result');
+            var appointmentButton = document.getElementById('doctorAppointment');
+
+            if (score >= 3) {
+            resultContainer.textContent = 'Result: Has Autism.';
+            appointmentButton.style.display = 'block';
+        }   else if (score >= 1) {
+            resultContainer.textContent = 'Result: May Have Slight Autism.';
+            appointmentButton.style.display = 'block';
+        }       else {
+            resultContainer.textContent = 'Result: No Autism.';
+            appointmentButton.style.display = 'none';
+    }
+        }
+        document.getElementById("doctorAppointment").addEventListener("click", function() {
+    window.location.href = "https://www.practo.com/hyderabad/doctor/srikanth-yadav-1-neurologist?practice_id=1362930&specialization=Neurologist&referrer=doctor_listing&page_uid=57c402ee-a8af-4b4c-b829-e324e7a996aa";
+  });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

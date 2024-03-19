@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro-Inclusive Learning Hub - Courses</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffe600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 
+    0.3s;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Added margin between cards */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Set a fixed height for the card */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-bottom: 1px solid #ddd;
+    max-width: 100%;
+    height: auto;
+    flex-grow: 1; /* Allow the image to grow and take available space */
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1; /* Allow the content to grow and take available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #1E90FF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/neurologo.png" alt="Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-5">Featured Courses</h2>
+        <div class="row">
+
+            <!-- Course 1: Adaptive Reading and Writing -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/adaptive-reading-and-writing.png" alt="Adaptive Reading and Writing" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Adaptive Reading and Writing</h5>
+                        <p class="card-text">
+                            Techniques for improving reading comprehension.<br>
+                            Strategies for overcoming challenges in writing and spelling.
+                        </p>
+                        <a href="adp.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2: Numeracy Skills Development -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/numeracy-skills-development.png" alt="Numeracy Skills Development" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Numeracy Skills Development</h5>
+                        <p class="card-text">
+                            Adaptive methods for learning and applying mathematical concepts.<br>
+                            Practical applications of numeracy in daily life.
+                        </p>
+                        <a href="num.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/social.png" alt="Social Skills Enhancement" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Social Skills Enhancement</h5>
+                        <p class="card-text">
+                            Interactive courses focusing on social communication.<br>
+                            Building and maintaining relationships.
+                        </p>
+                        <a href="social.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Executive Functioning Training -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/ex.png" alt="Executive Functioning Training" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Executive Functioning Training</h5>
+                        <p class="card-text">
+                            Developing organizational skills.<br>
+                            Time management and task prioritization.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Technology and Assistive Tools -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/assis.png" alt="Technology and Assistive Tools" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Technology and Assistive Tools</h5>
+                        <p class="card-text">
+                            Effective use of technology for learning.<br>
+                            Introduction to assistive tools and applications.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Mindfulness and Stress Management -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/mind.png" alt="Mindfulness and Stress Management" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mindfulness and Stress Management</h5>
+                        <p class="card-text">
+                            Techniques for managing stress and anxiety.<br>
+                            Introduction to mindfulness practices.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Coding and Programming for All -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/code.png" alt="Coding and Programming for All" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Coding and Programming for All</h5>
+                        <p class="card-text">
+                            Introduction to coding with a focus on accessibility.<br>
+                            Building problem-solving skills through programming.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Art and Creativity -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/art.png" alt="Art and Creativity" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Art and Creativity</h5>
+                        <p class="card-text">
+                            Expressive arts for self-discovery.<br>
+                            Creative activities tailored for neurodivergent individuals.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Neurodiversity in History and Culture -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/neuro1.png" alt="Neurodiversity in History and Culture" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Neurodiversity in History and Culture</h5>
+                        <p class="card-text">
+                            Understanding and celebrating neurodiversity.<br>
+                            Exploring the contributions of neurodivergent individuals throughout history.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Physical Education and Wellness -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/phys.png" alt="Physical Education and Wellness" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Physical Education and Wellness</h5>
+                        <p class="card-text">
+                            Adaptive physical activities promoting overall well-being.<br>
+                            Yoga and mindfulness for physical and mental health.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Career Exploration and Development -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/care.png" alt="Career Exploration and Development" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Career Exploration and Development</h5>
+                        <p class="card-text">
+                            Identifying strengths and interests.<br>
+                            Strategies for job searching and workplace success.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Language and Communication Skills -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/lang.png" alt="Language and Communication Skills" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Language and Communication Skills</h5>
+                        <p class="card-text">
+                            Enhancing verbal and non-verbal communication.<br>
+                            Alternative communication methods.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Science and Nature Exploration -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/scie.png" alt="Science and Nature Exploration" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Science and Nature Exploration</h5>
+                        <p class="card-text">
+                            Interactive courses on science topics with hands-on experiments.<br>
+                            Outdoor activities to explore and appreciate nature.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Critical Thinking and Problem Solving -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/crit.png" alt="Critical Thinking and Problem Solving" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Critical Thinking and Problem Solving</h5>
+                        <p class="card-text">
+                            Developing analytical and problem-solving skills.<br>
+                            Encouraging creative thinking and innovation.
+                        </p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

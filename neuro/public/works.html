@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Worksheets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .worksheet-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .worksheet {
+            width: 300px;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="worksheet-container">
+    <div class="worksheet">
+        <h2>Addition Worksheet</h2>
+
+        <form id="additionWorksheetForm">
+            <!-- Addition Question 1 -->
+            <div class="question">
+                <label for="q1-add">1. 5 + 3 = </label>
+                <input type="number" id="q1-add" name="q1-add" required>
+            </div>
+
+            <!-- Addition Question 2 -->
+            <div class="question">
+                <label for="q2-add">2. 10 + 7 = </label>
+                <input type="number" id="q2-add" name="q2-add" required>
+            </div>
+
+            <!-- Addition Question 3 -->
+            <div class="question">
+                <label for="q3-add">3. 15 + 8 = </label>
+                <input type="number" id="q3-add" name="q3-add" required>
+            </div>
+
+            <!-- Addition Question 4 -->
+            <div class="question">
+                <label for="q4-add">4. 20 + 12 = </label>
+                <input type="number" id="q4-add" name="q4-add" required>
+            </div>
+
+            <!-- Addition Question 5 -->
+            <div class="question">
+                <label for="q5-add">5. 25 + 5 = </label>
+                <input type="number" id="q5-add" name="q5-add" required>
+            </div>
+            <a href="https://3d29e951f7cdfc5b99.gradio.live/" target="_blank">
+            <button type="button" onclick="checkAdditionAnswers()">Submit</button>
+                </a>
+            
+            
+            
+        </form>
+
+        <div id="result-addition" class="result"></div>
+    </div>
+
+    <div class="worksheet">
+        <h2>Subtraction Worksheet</h2>
+
+        <form id="subtractionWorksheetForm">
+            <!-- Subtraction Question 1 -->
+            <div class="question">
+                <label for="q1-subtract">1. 10 - 5 = </label>
+                <input type="number" id="q1-subtract" name="q1-subtract" required>
+            </div>
+
+            <!-- Subtraction Question 2 -->
+            <div class="question">
+                <label for="q2-subtract">2. 15 - 8 = </label>
+                <input type="number" id="q2-subtract" name="q2-subtract" required>
+            </div>
+
+            <!-- Subtraction Question 3 -->
+            <div class="question">
+                <label for="q3-subtract">3. 20 - 12 = </label>
+                <input type="number" id="q3-subtract" name="q3-subtract" required>
+            </div>
+
+            <!-- Subtraction Question 4 -->
+            <div class="question">
+                <label for="q4-subtract">4. 25 - 5 = </label>
+                <input type="number" id="q4-subtract" name="q4-subtract" required>
+            </div>
+
+            <!-- Subtraction Question 5 -->
+            <div class="question">
+                <label for="q5-subtract">5. 30 - 15 = </label>
+                <input type="number" id="q5-subtract" name="q5-subtract" required>
+            </div>
+
+            <button type="button" onclick="checkSubtractionAnswers()">Submit</button>
+        </form>
+
+        <div id="result-subtraction" class="result"></div>
+    </div>
+</div>
+
+<div class="worksheet">
+    <h2>Fill in the Blanks Worksheet</h2>
+
+    <form id="fillBlanksWorksheetForm">
+        <!-- Fill in the Blanks Question 1 -->
+        <div class="question">
+            <label for="q1-fill-blanks">1. 5 + __ = 17 </label>
+            <input type="number" id="q1-fill-blanks" name="q1-fill-blanks" required>
+        </div>
+
+        <div class="question">
+            <label for="q2-fill-blanks">2. 18 - __ = 3 </label>
+            <input type="number" id="q2-fill-blanks" name="q2-fill-blanks" required>
+        </div>
+
+        <div class="question">
+            <label for="q3-fill-blanks">3. 15 + __ = 35 </label>
+            <input type="number" id="q3-fill-blanks" name="q3-fill-blanks" required>
+        </div>
+        <div class="question">
+            <label for="q4-fill-blanks">3. 11 + __ = 23 </label>
+            <input type="number" id="q4-fill-blanks" name="q4-fill-blanks" required>
+        </div>
+
+        <button type="button" onclick="checkFillBlanksAnswers()">Submit</button>
+    </form>
+
+    <div id="result-fill-blanks" class="result"></div>
+</div>
+</div>
+<script>
+    function checkAdditionAnswers() {
+        // Get user's answers for addition
+        const answer1 = parseInt(document.getElementById('q1-add').value);
+        const answer2 = parseInt(document.getElementById('q2-add').value);
+        const answer3 = parseInt(document.getElementById('q3-add').value);
+        const answer4 = parseInt(document.getElementById('q4-add').value);
+        const answer5 = parseInt(document.getElementById('q5-add').value);
+
+        // Calculate correct answers for addition
+        const correctAnswer1 = 5 + 3;
+        const correctAnswer2 = 10 + 7;
+        const correctAnswer3 = 15 + 8;
+        const correctAnswer4 = 20 + 12;
+        const correctAnswer5 = 25 + 5;
+
+        // Check answers and display result
+        const correctAnswers = [correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5];
+        const userAnswers = [answer1, answer2, answer3, answer4, answer5];
+
+        const correctCount = correctAnswers.filter((value, index) => value === userAnswers[index]).length;
+        const score = (correctCount / correctAnswers.length) * 100;
+
+        const resultDiv = document.getElementById('result-addition');
+        if (correctCount === correctAnswers.length) {
+            resultDiv.textContent = `Congratulations! All answers are correct. Your score: ${score}%`;
+            resultDiv.style.color = 'green';
+        } else {
+            resultDiv.textContent = `Oops! One or more answers are incorrect. Please check your answers. Your score: ${score}%`;
+            resultDiv.style.color = 'red';
+        }
+    }
+
+    function checkSubtractionAnswers() {
+        // Get user's answers for subtraction
+        const answer1 = parseInt(document.getElementById('q1-subtract').value);
+        const answer2 = parseInt(document.getElementById('q2-subtract').value);
+        const answer3 = parseInt(document.getElementById('q3-subtract').value);
+        const answer4 = parseInt(document.getElementById('q4-subtract').value);
+        const answer5 = parseInt(document.getElementById('q5-subtract').value);
+
+        // Calculate correct answers for subtraction
+        const correctAnswer1 = 10 - 5;
+        const correctAnswer2 = 15 - 8;
+        const correctAnswer3 = 20 - 12;
+        const correctAnswer4 = 25 - 5;
+        const correctAnswer5 = 30 - 15;
+
+        // Check answers and display result
+        const correctAnswers = [correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5];
+        const userAnswers = [answer1, answer2, answer3, answer4, answer5];
+
+        const correctCount = correctAnswers.filter((value, index) => value === userAnswers[index]).length;
+        const score = (correctCount / correctAnswers.length) * 100;
+
+        const resultDiv = document.getElementById('result-subtraction');
+        if (correctCount === correctAnswers.length) {
+            resultDiv.textContent = `Congratulations! All answers are correct. Your score: ${score}%`;
+            resultDiv.style.color = 'green';
+        } else {
+            resultDiv.textContent = `Oops! One or more answers are incorrect. Please check your answers. Your score: ${score}%`;
+            resultDiv.style.color = 'red';
+        }
+    }
+    function checkFillBlanksAnswers() {
+    // Get user's answers for fill in the blanks
+    const answer1 = parseInt(document.getElementById('q1-fill-blanks').value);
+    const answer2 = parseInt(document.getElementById('q2-fill-blanks').value);
+    const answer3 = parseInt(document.getElementById('q3-fill-blanks').value);
+    const answer4 = parseInt(document.getElementById('q4-fill-blanks').value);
+
+    // Calculate correct answers for fill in the blanks
+    const correctAnswer1 = 12;
+    const correctAnswer2 = 15;
+    const correctAnswer3 = 20;
+    const correctAnswer4 = 12;
+
+    // Check answers and display result
+    const resultDiv = document.getElementById('result-fill-blanks');
+    if (answer1 === correctAnswer1 && answer2 === correctAnswer2 && answer3 === correctAnswer3 && answer4 === correctAnswer4) {
+        const correctAnswers = [correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4];
+        const userAnswers = [answer1, answer2, answer3, answer4];
+
+        const correctCount = correctAnswers.filter((value, index) => value === userAnswers[index]).length;
+        const score = (correctCount / correctAnswers.length) * 100;
+
+        resultDiv.textContent = `Congratulations! All answers are correct. Your score: ${score}%`;
+        resultDiv.style.color = 'green';
+    } else {
+        resultDiv.textContent = 'Oops! One or more answers are incorrect. Please check your answers.';
+        resultDiv.style.color = 'red';
+    }
+}
+
+</script>
+
+</body>
+</html>
